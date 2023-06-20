@@ -11,29 +11,29 @@ client.once('ready', () => {
     console.log('Ready!');
 
     const { REST } = require('@discordjs/rest');
-const { Routes } = require('discord-api-types/v9');
+    const { Routes } = require('discord-api-types/v9');
 
-const commands = [
-  {
-    name: 'piada',
-    description: 'Obtenha uma piada engraçada do bot.',
-  },
-];
+    const commands = [
+    {
+        name: 'piada',
+        description: 'Obtenha uma piada engraçada do bot.',
+    },
+    ];
 
-const rest = new REST({ version: '9' }).setToken(token);
+    const rest = new REST({ version: '9' }).setToken(token);
 
-(async () => {
-  try {
-    await rest.put(
-      Routes.applicationCommands(client.user.id),
-      { body: commands },
-    );
+    (async () => {
+    try {
+        await rest.put(
+        Routes.applicationCommands(client.user.id),
+        { body: commands },
+        );
 
 
-  } catch (error) {
-    console.error(error);
-  }
-})();
+    } catch (error) {
+        console.error(error);
+    }
+    })();
 
 
       
