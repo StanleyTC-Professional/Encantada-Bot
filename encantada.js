@@ -55,7 +55,7 @@ client.on('interactionCreate', async (interaction) => {
     }
 
     if (commandName === 'ping'){
-        const ping = '${Math.round(client.ws.ping)}ms';
+        const ping = `${Math.round(client.ws.ping)}ms`;
         await interaction.reply(`Ping: ${ping}`);
         
     }
